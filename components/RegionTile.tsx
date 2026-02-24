@@ -98,7 +98,7 @@ export function RegionTile({ region, rank, accentColor }: Props) {
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-[10px] font-mono" style={{ color: '#4a5568' }}>
+          <span className="text-[10px] font-mono" style={{ color: '#9ca3af' }}>
             {region.flag} {region.city}
           </span>
           <motion.span
@@ -135,7 +135,7 @@ export function RegionTile({ region, rank, accentColor }: Props) {
       {/* ── RTT reading ── */}
       <div className="flex items-end justify-between">
         <div>
-          <span className="text-[10px] font-mono" style={{ color: '#4a5568' }}>
+          <span className="text-[10px] font-mono" style={{ color: '#9ca3af' }}>
             RTT MEDIAN
           </span>
           <div
