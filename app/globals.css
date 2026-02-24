@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* ── Phosphor-glow CRT palette ─────────────────────────────────── */
+:root {
+  --crt-bg: #030804;
+  --crt-green: #00ff41;
+  --crt-blue: #00b4ff;
+  --crt-amber: #ffb700;
+  --crt-dim: #4a5568;
+}
+
+@theme inline {
+  --font-mono: var(--font-jetbrains);
+  --font-serif: var(--font-playfair);
+  --color-background: var(--crt-bg);
+  --color-foreground: var(--crt-green);
+}
+
+/* ── Base reset ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--crt-bg);
+  color: var(--crt-green);
+  scrollbar-width: thin;
+  scrollbar-color: #00ff4133 #030804;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-jetbrains), 'Courier New', monospace;
+  background: var(--crt-bg);
+  color: var(--crt-green);
+  /* Subtle screen flicker */
+  animation: screenFlicker 8s infinite;
+}
+
+@keyframes screenFlicker {
+  0%, 90%, 100% {
+    opacity: 1;
+  }
+  91%, 93% {
+    opacity: 0.97;
+  }
+  92% {
+    opacity: 0.94;
+  }
+}
+
+/* ── Utility classes ─────────────────────────────────────────────── */
+.font-mono {
+  font-family: var(--font-jetbrains), 'Courier New', monospace;
+}
+
+.font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030804;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ff4133;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff4166;
+}
