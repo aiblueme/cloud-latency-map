@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono, Playfair_Display } from 'next/font/google';
 import './globals.css';
+import MotionProvider from '@/components/MotionProvider';
 
 const jetbrains = JetBrains_Mono({
   subsets: ['latin'],
@@ -19,6 +20,12 @@ export const metadata: Metadata = {
   title: 'CLOUD LATENCY MAP',
   description:
     'Real-time browser-side latency comparison: AWS vs Azure across 10 global regions.',
+  openGraph: {
+    title: 'CLOUD LATENCY MAP',
+    description: 'Real-time browser-side latency comparison: AWS vs Azure across 10 global regions.',
+    type: 'website',
+    url: 'https://cloud-latency-map.shellnode.lol',
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${jetbrains.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }
