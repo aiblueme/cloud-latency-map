@@ -36,6 +36,7 @@ Agent: Claude Code
 - [P3] Verify output: 'standalone' in next.config.js is configured correctly for Dockerfile
 
 ## Done
+- [x] Add MIT LICENSE — 2026-03-10 — commit d66365f
 - [x] .dockerignore hardened — 2026-03-09
 - [x] docker-compose.yml added with SWAG labels — 2026-03-09
 - [x] OG tags added — 2026-03-10 — commit 4216504
