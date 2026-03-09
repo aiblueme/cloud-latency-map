@@ -1,0 +1,23 @@
+services:
+  cloud-latency-map:
+    build: .
+    image: cloud-latency-map
+    container_name: cloud-latency-map
+    restart: unless-stopped
+    networks:
+      - swag-network
+    labels:
+      - "swag=enable"
+      - "swag_address=cloud-latency-map"
+      - "swag_port=3000"
+      - "swag_url=cloud-latency-map.shellnode.lol"
+      - "homepage.instance=my-vps"
+      - "homepage.name=Cloud Latency Map"
+      - "homepage.group=Tools"
+      - "homepage.href=https://cloud-latency-map.shellnode.lol"
+      - "homepage.icon=mdi-cloud"
+      - "homepage.description=Cloud provider latency comparison map"
+
+networks:
+  swag-network:
+    external: true
